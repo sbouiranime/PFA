@@ -1,0 +1,88 @@
+/* Styles pour le container principal du formulaire */
+.signup-container {
+    text-align: center; /* Centre le contenu horizontalement */
+    width: 60%; /* Largeur du container augmentée à 60% */
+    margin: 20% auto; /* Centre le container verticalement et horizontalement */
+    border: 2px solid black; /* Bordure noire */
+    padding: 20px; /* Espacement intérieur */
+    border-radius: 20px; /* Coins arrondis */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25); /* Ombre portée légèrement plus prononcée */
+}
+
+/* Styles pour le titre du formulaire */
+.signup-title {
+    color: black; /* Couleur du texte */
+    font-weight: bold; /* Gras */
+}
+
+/* Styles pour le contenu du formulaire */
+.signup-content {
+    display: flex; /* Utilisation de flexbox pour organiser les éléments en ligne */
+    align-items: center; /* Centre les éléments verticalement */
+    justify-content: center; /* Centre les éléments horizontalement */
+}
+
+/* Styles pour l'image */
+.signup-image {
+    width: 450px; /* Largeur de l'image */
+    height: auto; /* Hauteur automatique en fonction de la largeur */
+    margin-right: 20px; /* Espacement à droite */
+    border-right: 2px solid #000000; /* Bordure droite pour créer une ligne verticale */
+    
+}
+
+/* Styles pour le formulaire */
+.signup-form {
+    flex: 1; /* Permet au formulaire de prendre tout l'espace restant */
+    text-align: left; /* Alignement du texte à gauche à l'intérieur du formulaire */
+    padding-left: 20px; /* Ajout d'un padding à gauche pour l'espace entre l'image et les champs de saisie */
+}
+
+
+/* Styles pour les libellés des champs de saisie */
+label {
+    display: flex; /* Utilisation de flexbox pour aligner les éléments */
+    align-items: center; /* Centre les éléments verticalement */
+}
+
+/* Styles pour chaque champ de saisie */
+.input-field {
+    margin-bottom: 15px; /* Espacement entre les champs */
+}
+
+/* Styles pour les champs de saisie */
+input {
+    width: 100%; /* Largeur des inputs à 100% du container */
+    padding: 10px; /* Espacement interne des inputs */
+    border: 1px bold #000000fe; /* Bordure des inputs */
+    border-radius: 20px; /* Coins arrondis */
+    box-sizing: border-box; /* Inclure la bordure dans la largeur et la hauteur */
+    max-width: 450px; /* Largeur maximale des inputs */
+}
+
+/* Styles pour le bouton de soumission (submit) */
+input[type="submit"] {
+    background-color: #dfd1bc; /* Marron café */
+    color: #000000; /* Texte noir */
+    padding: 10px 20px; /* Espacement interne */
+    border: none; /* Suppression de la bordure */
+    border-radius: 20px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointer au survol */
+    font-weight: bold;
+    width: 100%; /* Largeur à 100% du container */
+}
+
+/* Styles pour le bouton "Continue with Google" */
+.button-google {
+    background-color: #FFFFFF; /* Fond blanc */
+    color: #000000; /* Texte noir */
+    padding: 10px 20px; /* Espacement interne */
+    border: 1px solid #CCCCCC; /* Bordure grise */
+    border-radius: 20px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointer au survol */
+    display: flex; /* Utilisation de flexbox */
+    align-items: center; /* Centre l'icône et le texte verticalement */
+    justify-content: center; /* Centre l'icône et le texte horizontalement */
+    width: 100%; /* Définir une largeur fixe */
+}
+

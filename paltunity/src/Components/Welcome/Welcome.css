@@ -1,0 +1,56 @@
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrer horizontalement */
+    text-align: center; /* Centrer le texte horizontalement */
+    margin: 10px 0;
+
+  }
+  
+  .input-group input {
+    margin-left: 10px;
+    border-radius: 0px; /* Arrondir les coins des deux côtés */
+}
+
+
+.welcome-image {
+    display: block; /* Pour centrer l'image */
+    margin: 70px auto 0; /* 50px de marge en haut, centré horizontalement */
+    width: 20%; /* Pour ajuster la taille de l'image en fonction de la largeur du conteneur */
+    height: auto; /* Pour conserver les proportions de l'image */
+    margin-left: 640px;
+}
+.welcome-title {
+    text-align: center; /* Centrer horizontalement */
+    margin-top: 40px; /* Marge supérieure pour déplacer le titre vers le bas */
+    font-family: Arial, sans-serif; /* Police de caractères */
+    font-size: 2rem; /* Taille de la police */
+    color: #333; /* Couleur du texte */
+    text-transform: uppercase; /* Convertir le texte en majuscules */
+    letter-spacing: 2px; /* Espacement entre les lettres */
+    font-weight: bold; /* Gras */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Ombre portée légère */
+    margin-bottom: 40px;
+    margin-left: 55px;
+}
+
+/* Styles pour le bouton de connexion */
+.login-button {
+    background-image: linear-gradient(to right, red 0%, red 25%, black 25%, black 45%, white 50%, white 65%, rgb(53, 133, 81) 75%, rgb(44, 152, 40) 100%); /* Dégradé de couleur */
+    color: #fff; /* Texte blanc */
+    padding: 10px 20px; /* Espacement interne */
+    border: none; /* Suppression de la bordure */
+    border-radius: 20px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointer au survol */
+    font-weight: bold;
+    width: 8%; /* Largeur du bouton */
+    margin-left: 725px;
+    margin-top: 30px;
+    font-weight: bold; /* Gras */
+
+}
+.login-button:hover {
+    background-image: linear-gradient(to right, darkred 0%, darkred 25%, black 25%, black 50%, white 50%, white 75%, rgb(53, 133, 81) 75%, rgb(44, 152, 40) 100%); /* Dégradé de couleur au survol */
+}
+
+
