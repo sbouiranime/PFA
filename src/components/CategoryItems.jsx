@@ -54,7 +54,7 @@ export default function CategoryItems({ categoryName }) {
     return (
         <>
             <h1>{categoryName}</h1>
-            <div className="ml-20 grid grid-cols-3 gap-x-3 gap-y-5">
+            <div className="ml-20 grid grid-cols-3 gap-x-3 gap-y-5 ">
                 {isLoading ? <div> Loading ...</div> : 
                 productData.map((product) => (
                     <ItemCard key={product.id} product={product} />

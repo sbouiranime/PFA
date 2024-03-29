@@ -39,7 +39,7 @@ export function NavigationTabs() {
   return (
     <>
     {isLoading ? <div>...is loading </div> :
-    <Tabs value="All" className="mt-20">
+    <Tabs value="All" className="mt-20 flex flex-col min-h-screen">
       
             <TabsHeader>
               <Tab value="All">All</Tab>
@@ -53,12 +53,12 @@ export function NavigationTabs() {
 
             <TabsBody>
               <TabPanel value="All">
-                <CategoryItems categoryName="All"/>
+                <CategoryItems  categoryName="All"/>
               </TabPanel>
               {categoryList.map((category) => (
                 <TabPanel key={category} value={category} >
                   
-                  <CategoryItems categoryName={category} />
+                  <CategoryItems  categoryName={category} />
                 
                 </TabPanel>
               ))}
