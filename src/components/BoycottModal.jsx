@@ -35,7 +35,7 @@ export function BoycottModal() {
             setAlternative(value.trim());
         }
 
-        if (boycottedBrand !== "" && proofUrl !== "" && reason !== "") {
+        if (boycottedBrand.trim() !== "" && proofUrl.trim() !== "" && reason.trim() !== "") {
             setIsDisabled(false);
         } else {
             setIsDisabled(true);
@@ -48,9 +48,9 @@ export function BoycottModal() {
         fetch('http://localhost:8080/suggestion/addBoycott', {
             method: 'POST',
             body: JSON.stringify({
-                boycotted_brand: boycottedBrand,
+                name: boycottedBrand,
                 alternative: alternative,
-                proof_url: proofUrl,
+                proofURL: proofUrl,
                 reason: reason,
                 is_accepted: false
             }),
@@ -63,7 +63,9 @@ export function BoycottModal() {
             if (response.ok) {
                 // Handle successful submission
                 console.log('Boycott submitted successfully');
-                //handleOpen();
+
+                handleOpen();
+                
             } else {
                 // Handle error
                 console.error('Error submitting boycott');
@@ -75,9 +77,9 @@ export function BoycottModal() {
     };
 
     return (
-        <form> 
+        
             <>
-                <Button className="mb-1 flex items-center justify-center gap-3 !py-4 shadow-md" color="red" onClick={handleOpen}>
+                <Button className="mb-1 flex items-center justify-center gap-3 !py-4 shadow-md grow " color="red" onClick={handleOpen}>
                     Boycott
                 </Button>
                 <Dialog
@@ -100,7 +102,7 @@ export function BoycottModal() {
                             </Typography>
                             <div className="flex grid grid-cols-2 gap-4">
                                 <Input label="Boycotted Brand*" size="sm" style={{ flex: 1 }} name="boycottedBrand" onChange={handleChange} />
-                                <Input label="Alternative" name="alternative" size="sm" style={{ flex: 1 }} />
+                                <Input label="Alternative" name="alternative" size="sm" style={{ flex: 1 }} onChange={handleChange} />
 
                             </div>
                             <Input label="Proof URL*" size="sm" style={{ flex: 1 }} name="proof" onChange={handleChange} />
@@ -148,13 +150,13 @@ export function BoycottModal() {
                             >
                                 <span>Close</span>
                             </Button>
-                            <Button variant="gradient"  color="green" disabled={isDisabled} onClick={submitBoycott}>
+                            <Button variant="gradient"  color="green" disabled={isDisabled} onClick={submitBoycott} >
                                 Submit
                             </Button>
                         </DialogFooter>
                     </Card>
                 </Dialog>
             </>
-        </form>
+   
     );
 }
