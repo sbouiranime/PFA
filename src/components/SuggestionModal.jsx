@@ -10,6 +10,8 @@ import {
   MenuItem,
 } from "@material-tailwind/react";
 import { BoycottModal } from "./BoycottModal";
+import {AlternativeModal} from "./AlternativeModal";
+import {ComplaintModal} from "./ComplaintModal";
 
 export function SuggestionModal() {
   const [open, setOpen] = React.useState(false);
@@ -88,15 +90,9 @@ export function SuggestionModal() {
             <ul className="mt-3 -ml-2 flex flex-col gap-1">
               <BoycottModal />
 
+              <AlternativeModal />
 
-              <Button className="mb-1 flex items-center justify-center gap-3 !py-4 shadow-md">
-                Complaint
-              </Button>
-
-
-              <Button className="mb-1 flex items-center justify-center gap-3 !py-4 shadow-md" color="green">
-                Alternative
-              </Button>
+              <ComplaintModal />
 
             </ul>
           </div>
